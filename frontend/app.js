@@ -29,15 +29,18 @@ class ReceiptsManager {
          <th>date</th>
          </thead>
          <tbody>
-         ${data.map(
-            (row) => `<tr>
+         ${data
+            .reverse()
+            .map(
+               (row) => `<tr>
          <td>${row.category}</td>
          <td>${row.subtotal}</td>
          <td>${row.currency_code}</td>
          <td>${row.date}</td>
          <td><img width="30" src="${row.img_url}"></td>
          </tr>`
-         )}
+            )
+            .join('')}
          </tbody>
          </table>`
       );

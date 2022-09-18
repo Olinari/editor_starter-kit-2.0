@@ -43,10 +43,10 @@ app.post('/fileupload', function (req, res) {
          };
          request(options, function (error, response, body) {
             console.log(error, response, body);
+            res.sendFile(path.join(__dirname, './index.html'));
          });
       }
    });
-   res.render('./index.html');
 });
 
 app.get('/getAllReceipts', function (req, res) {
