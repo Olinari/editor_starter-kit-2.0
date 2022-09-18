@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-   <style>
-      .styled-table tbody tr.active-row {
-         font-weight: bold;
-         color: #009879;
-      }
-      .styled-table tbody tr {
-         border-bottom: 1px solid #dddddd;
-      }
+    <style>
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
 
-      .styled-table tbody tr:nth-of-type(even) {
-         background-color: #f3f3f3;
-      }
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
 
-      .styled-table tbody tr:last-of-type {
-         border-bottom: 2px solid #009879;
-      }
-      .styled-table th,
-      .styled-table td {
-         padding: 12px 15px;
-      }
-      .styled-table thead tr {
-         background-color: #009879;
-         color: #ffffff;
-         text-align: left;
-      }
-   </style>
-   <script defer src="./frontend/app.js"></script>
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+    </style>
+    <script src="form-loader.js"></script>
+    <script src="./frontend/app.js"></script>
 
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-   </head>
-   <body>
-      <b>Refy</b>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <b>Refy</b>
 
-      <form action="fileupload" method="post" enctype="multipart/form-data">
-         <label for="img">Select image:</label>
-         <input type="file" id="img" name="img" accept="image/*" />
-         <input id="submit" type="submit" id="refresh" />
-      </form>
-   </body>
+        <form
+            id="form"
+            action="fileupload"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*" />
+            <input id="submit" type="submit" id="refresh" />
+        </form>
+    </body>
 </html>
