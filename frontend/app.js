@@ -32,7 +32,6 @@ class ReceiptsManager {
          </thead>
          <tbody>
          ${data
-             .reverse()
              .map(
                  (row) => `<tr>
          <td><img width="30" src="${row.img_url}"></td>
