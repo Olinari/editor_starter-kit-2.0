@@ -16,9 +16,9 @@ class ReceiptsManager {
     }
 
     createReceiptsTable(data) {
-        console.table(data[1]);
         const body = document.querySelector('body');
         const oldTable = document.querySelector('#rTable');
+
         oldTable?.remove();
         body.insertAdjacentHTML(
             'beforeend',
@@ -53,9 +53,7 @@ class ReceiptsManager {
     const receiptsManager = new ReceiptsManager();
     const allReceipts = receiptsManager.getAllReceipts();
     allReceipts.then((data) => receiptsManager.createReceiptsTable(data));
-    formLoader.submit('form', function (dados) {
-        console.log(dados);
-    });
+    formLoader.submit('form', ()=>{});
     document.querySelector('#submit').onclick = () => {
         app();
     };
